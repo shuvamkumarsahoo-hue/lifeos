@@ -127,6 +127,10 @@ function App() {
   ========================================= */
 
   const [page, setPage] = useState("Overview");
+  const userName =
+  session?.user?.user_metadata?.display_name ||
+  session?.user?.email?.split("@")[0] ||
+  "there";
 
   const [dark, setDark] = useState(
     load("lifeos-theme", true)
@@ -534,7 +538,7 @@ function App() {
           <div className="mini-profile">
 
             <div className="avatar">
-              S
+              {userName.charAt(0).toUpperCase()}
             </div>
 
             <div>
@@ -617,7 +621,7 @@ function App() {
 
 
             <div className="avatar large">
-              S
+            {userName.charAt(0).toUpperCase()}
             </div>
 
           </div>
@@ -630,6 +634,8 @@ function App() {
         {page === "Overview" && (
 
           <Dashboard
+          
+            userName={userName}
             lifeScore={lifeScore}
             taskPercent={taskPercent}
             habitPercent={habitPercent}
@@ -774,6 +780,7 @@ function App() {
 ===================================================== */
 
 function Dashboard({
+  userName,
   lifeScore,
   taskPercent,
   habitPercent,
@@ -803,8 +810,7 @@ function Dashboard({
           </p>
 
           <h2>
-            Good morning, Shuvam{" "}
-            <span>👋</span>
+          Good morning, {userName} <span>👋</span>
           </h2>
 
           <p className="muted">
