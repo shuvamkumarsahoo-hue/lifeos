@@ -1,0 +1,19 @@
+LIFEOS FINAL — START HERE
+
+1. Open this folder in VS Code.
+2. Copy .env.example -> .env.local
+3. Put your existing Supabase URL and publishable key into .env.local
+4. Open PowerShell in this folder.
+5. Run: npm install
+6. Run: npm run dev
+7. Open the local Vite URL.
+
+Editable where it makes sense:
+- Tasks: edit/delete/complete
+- Goals: add/edit/delete/progress
+- Habits: add/edit/delete/check-ins/targets
+- Study: add/edit/delete subjects + progress
+- Finance: add/edit/delete expenses
+- Notes: add/edit/delete notes
+
+The visual system is unified across the app. Dashboard and other presentation-focused areas were not overloaded with unnecessary edit controls.
